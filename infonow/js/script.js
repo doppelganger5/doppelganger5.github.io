@@ -1,4 +1,13 @@
 $(document).ready(function() {
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", coinURL, true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+        console.log("completed");
+    };
+    xhr.send();
+    
     var coinURL = 'https://api.nomics.com/v1/currencies/ticker?key=28a45504e7a0e0963495e7301bf1a885&sort=rank&interval=1d&convert=USD&per-page=10&page=1'
     $.ajax({
         url: coinURL,
@@ -15,14 +24,6 @@ $(document).ready(function() {
     }).fail(function (error) {
         alert("Error occured")
     })
-    
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", coinURL, true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        console.log("completed");
-    };
-    xhr.send();
 
     function displayCrypto(response){
 
