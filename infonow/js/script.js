@@ -1,19 +1,14 @@
 $(document).ready(function() {
-
-    // var coinURL = 'https://coinlib.io/api/v1/coinlist?key=31d17c8839e538fe&page=1&order=rank_asc'
     var coinURL = 'https://api.nomics.com/v1/currencies/ticker?key=28a45504e7a0e0963495e7301bf1a885&sort=rank&interval=1d&convert=USD&per-page=10&page=1'
     $.ajax({
         url: coinURL,
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        //data: myData,
         type: 'GET',
         crossDomain: true,
-        //dataType: 'jsonp',
         success: function() { alert("Success"); },
         error: function() { alert('Failed!'); }
-        //beforeSend: setHeader
     }).done(function (response) {
         console.log(response)
         displayCrypto(response)
