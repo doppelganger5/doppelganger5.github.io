@@ -15,6 +15,7 @@ $(document).ready(function() {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         type: 'GET',
+        dataType: 'jsonp',
         crossDomain: true,
         success: function() { alert("Success"); },
         error: function() { alert('Failed!'); }
