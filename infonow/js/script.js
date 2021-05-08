@@ -9,7 +9,7 @@ $(document).ready(function() {
         crossDomain: true,
         //dataType: 'jsonp',
         success: function() { alert("Success"); },
-        error: function() { alert('Failed!'); },
+        error: function() { alert('Failed!'); }
         //beforeSend: setHeader
     type: "POST"
     }).done(function (response) {
