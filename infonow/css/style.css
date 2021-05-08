@@ -2,7 +2,7 @@
     font-family: 'Milliard SemiBold';
     font-style: normal;
     font-weight: normal;
-    src: local('Milliard SemiBold'), url('fonts/ReneBiederMilliardSemiBold.woff') format('woff');
+    src: local('Milliard SemiBold'), url('../fonts/ReneBiederMilliardSemiBold.woff') format('woff');
 }
 
 * {
