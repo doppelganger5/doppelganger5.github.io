@@ -16,6 +16,7 @@ $(document).ready(function() {
         },
         type: 'GET',
         dataType: 'jsonp',
+        jsonpCallback: 'jsonp_callback',
         crossDomain: true,
         success: function() { alert("Success"); },
         error: function() { alert('Failed!'); }
@@ -25,7 +26,11 @@ $(document).ready(function() {
     }).fail(function (error) {
         alert("Error occured")
     })
-
+    
+    function jsonp_callback(json){
+        console.log(json)
+    }
+    
     function displayCrypto(response){
 
         var firstCrypto = $(".symbolone h4")
