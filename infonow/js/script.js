@@ -1,22 +1,11 @@
 $(document).ready(function() {
     var coinURL = 'https://api.nomics.com/v1/currencies/ticker?key=28a45504e7a0e0963495e7301bf1a885&sort=rank&interval=1d&convert=USD&per-page=10&page=1'
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", coinURL, true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function () {
-        console.log("completed");
-    };
-    xhr.send();
-    
-    
+   
     $.ajax({
         url: coinURL,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
         type: 'GET',
         dataType: 'jsonp',
-        jsonpCallback: 'jsonp_callback',
+        contentType: 'application/json',
         crossDomain: true,
         success: function() { alert("Success"); },
         error: function() { alert('Failed!'); }
