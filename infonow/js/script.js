@@ -15,6 +15,14 @@ $(document).ready(function() {
     }).fail(function (error) {
         alert("Error occured")
     })
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", coinURL, true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = function () {
+        console.log("completed");
+    };
+    xhr.send();
 
     function displayCrypto(response){
 
