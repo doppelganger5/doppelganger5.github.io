@@ -11,7 +11,6 @@ $(document).ready(function() {
         success: function() { alert("Success"); },
         error: function() { alert('Failed!'); }
         //beforeSend: setHeader
-    type: "POST"
     }).done(function (response) {
         console.log(response)
         displayCrypto(response)
