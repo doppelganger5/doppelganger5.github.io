@@ -3,13 +3,9 @@ $(document).ready(function() {
     $.ajax({
         url: coinURL,
         type: 'GET',
-        
         dataType: 'jsonp',
-        
         contentType: 'application/json',
-        crossDomain: true,
-        success: function() { alert("Success"); },
-        error: function() { alert('Failed!'); }
+        crossDomain: true
     }).done(function (response) {
         console.log(response)
         displayCrypto(response)
