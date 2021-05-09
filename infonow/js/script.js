@@ -4,6 +4,7 @@ $(document).ready(function() {
     $.ajax({
         url: coinURL,
         type: 'GET',
+        Access-Control-Allow-Headers: *,
         dataType: 'jsonp',
         contentType: 'application/json',
         crossDomain: true,
