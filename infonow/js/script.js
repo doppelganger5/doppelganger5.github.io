@@ -5,7 +5,6 @@ $(document).ready(function() {
         url: coinURL,
         type: 'GET',
         Access-Control-Allow-Headers: *,
-//         Permissions-Policy: interest-cohort=(),
         dataType: 'jsonp',
         contentType: 'application/json',
         crossDomain: true,
